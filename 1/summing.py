@@ -9,5 +9,3 @@ def sum_numbers(numbers=None):
         return sum(numbers)
 # sum_numbers(None)
 
-
-
