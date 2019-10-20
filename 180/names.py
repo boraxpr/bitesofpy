@@ -45,4 +45,4 @@ def group_names_by_country(data: str = data) -> defaultdict:
 
 
 
-print(group_names_by_country())
+# print(group_names_by_country())
