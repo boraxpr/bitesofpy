@@ -1,7 +1,7 @@
 from collections import deque
 def my_queue(n=5):
     l = []
-    d = deque(l, 5)
+    d = deque(l, n)
     return d
 
 
