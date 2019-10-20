@@ -64,3 +64,5 @@ def test_grouping2_return(grouping2, key, expected):
 
 test_grouping1_return
 test_grouping2_return
+test_return_type(grouping1,grouping2)
+test_return_dict_len(grouping1,grouping2)
