@@ -39,9 +39,10 @@ def group_names_by_country(data: str = data) -> defaultdict:
             firstname = word
             counter=0
             continue
-    return sorted(countries.items())
+    sort = sorted(countries.items())
+    countries = defaultdict(list, sort)
+    return countries
 
 
 
-
-# print(group_names_by_country())
+print(group_names_by_country())
