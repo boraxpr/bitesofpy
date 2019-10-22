@@ -38,6 +38,8 @@ def most_prolific_automaker(year):
 def get_models(automaker, year):
     """Filter cars 'data' by 'automaker' and 'year',
        return a set of models (a 'set' to avoid duplicate models)"""
+    # cnt = Counter(row["automaker"] for row in data
+    #               if row["year"] == year).most_common()
     modelset = set()
     for item in data:
         itemyear = item['year']
