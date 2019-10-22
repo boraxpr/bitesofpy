@@ -8,7 +8,6 @@ def print_colors():
        - if the color is not in VALID_COLORS, print 'Not a valid color' and continue.
        - otherwise print the color in lower case."""
     while True:
-        print("A Color: ")
         inp = input()
         input_lowered = inp.lower()
         valid = 0
