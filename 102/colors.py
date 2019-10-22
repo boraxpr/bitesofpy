@@ -14,9 +14,7 @@ def print_colors():
         if input_lowered == "quit":
             print("bye")
             break
-        for color in VALID_COLORS:
-            if color == input_lowered:
-                valid = 1
+        valid = input_lowered in VALID_COLORS
         if valid == 1:
             print(input_lowered)
         else:
@@ -24,4 +22,4 @@ def print_colors():
             continue
         pass
 
-print_colors()
+# print_colors()
