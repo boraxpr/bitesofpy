@@ -19,7 +19,12 @@ def print_game_stats(games_won=games_won):
     """
     for key,value in games_won.items():
         # print(str(key) + " " + str(value))
-        print(str(key) + " has won " + str(value) + " games")
+        if value == 1:
+            print(str(key) + " has won " + str(value) + " game")
+            continue
+        else:
+            print(str(key) + " has won " + str(value) + " games")
+            continue
     pass
 
 # print_game_stats(games_won)
