@@ -25,7 +25,7 @@ def slice_and_dice(text: str = text) -> list:
     for line in text.split("\n"):
         line = line.strip()
         # print(line[:1:])
-        if not line[:1:].istitle():
+        if not line[:1:] in ascii_lowercase :
             words = []
             for word in line.split():
                 words.append(word)
