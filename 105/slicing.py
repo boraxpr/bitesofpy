@@ -31,10 +31,10 @@ def slice_and_dice(text: str = text) -> list:
                 words.append(word)
                 # print(words)
                 # print(words[-1])
-                stripdot = words[-1].strip(".")
-                stripex = stripdot.strip("!")
-                # print(stripex)
-                results.append(stripex)
+            stripdot = words[-1].strip(".")
+            stripex = stripdot.strip("!")
+            # print(stripex)
+            results.append(stripex)
     return results
 
 # slice_and_dice(text)
