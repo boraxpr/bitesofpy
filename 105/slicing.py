@@ -23,20 +23,24 @@ def slice_and_dice(text: str = text) -> list:
     # textb = text.strip()
     # print(textb)
     for line in text.split("\n"):
+        # print(line)
         line = line.strip()
+        # print("l:" + line)
         # print(line[:1:])
-        if line[:1:] in ascii_lowercase :
-            words = []
-            for word in line.split():
-                words.append(word)
-                # print(words)
-                # print(words[-1])
-            stripdot = words[-1].strip(".")
-            stripex = stripdot.strip("!")
+        # print(line[:1:] in ascii_lowercase)
+        if line[:1:] in ascii_lowercase:
+            words = ""
+            for idx,word in enumerate(line.split()):
+                if idx == line.split().__len__()-1:
+                    # print(idx.__str__()+" "+word.__str__())
+                    strip = word.strip(".").strip("!")
+                    results.append(strip)
+            # stripdot = words.strip(".")
+            # stripex = stripdot.strip("!")
             # print(stripex)
-            results.append(stripex)
+            # results.append(stripex)
     return results
 
-# slice_and_dice(text)
-# print(slice_and_dice())
+slice_and_dice(text)
+# print(slice_and_dice(text))
 
