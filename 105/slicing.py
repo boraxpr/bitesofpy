@@ -41,6 +41,6 @@ def slice_and_dice(text: str = text) -> list:
             # results.append(stripex)
     return results
 
-slice_and_dice(text)
+# slice_and_dice(text)
 # print(slice_and_dice(text))
 
