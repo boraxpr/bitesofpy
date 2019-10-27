@@ -35,3 +35,8 @@ def test_rotation_of_n_bigger_than_string():
     mod = 100 % len(string)  # 10
     assert rotate(string, mod) in (expected_solution1,
                                    expected_solution2)
+
+# print(rotate('pybites loves julian and bob!',-15))
+test_bigger_rotation_of_positive_n()
+test_bigger_rotation_of_negative_n()
+test_rotation_of_n_bigger_than_string()
