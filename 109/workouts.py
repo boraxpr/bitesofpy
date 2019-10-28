@@ -34,11 +34,11 @@ def get_workout_motd(day):
         raise KeyError
     # print(value)
     if day is "Saturday" or "Sunday":
-        return go_train.format(value)
-    else:
         return chill
+    else:
+        return go_train.format(value)
 
     pass
 
 # get_workout_motd("Saturday")
-# print(get_workout_motd("monday"))
+print(get_workout_motd("Sunday"))
