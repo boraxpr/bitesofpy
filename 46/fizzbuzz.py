@@ -1,14 +1,10 @@
 def fizzbuzz(num):
-    ret = []
-    for each in num:
-        if each % 3 == 0 and each % 5 == 0:
-            ret.append('Fizz Buzz')
-        elif each % 3 == 0:
-            ret.append('Fizz')
-        elif each % 5 == 0:
-            ret.append('Buzz')
-        else:
-            ret.append(each)
-    return ret.__str__()
+    if num % 3 == 0 and num % 5 == 0:
+        return 'Fizz Buzz'
+    elif num % 3 == 0:
+        return 'Fizz'
+    elif num % 5 == 0:
+        return 'Buzz'
+    else:
+        return num
 
-# print(fizzbuzz([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]))
