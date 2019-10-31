@@ -4,7 +4,7 @@ def countdown_for(start=10):
     print('time is up')
 
 
-def countdown_recursive(start):
+def countdown_recursive(start=10):
     if start == 1:
         print(start)
         print('time is up')
