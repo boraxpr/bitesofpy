@@ -4,7 +4,7 @@ def remove_punctuation(input_string):
     for each in input_string:
         each = each.strip('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
         o = o + each
-    print(o)
+    return o
 
 
 # remove_punctuation("hello , !\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~world")
