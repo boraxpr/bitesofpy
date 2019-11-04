@@ -8,19 +8,17 @@ def filter_names(names):
     filtered_list = []
     for name in names:
         # print(name[0])
-        checker = 0
+        namekun = list(name)
+        # checker = 0
         if IGNORE_CHAR.title() == name[0] or IGNORE_CHAR == name[0]:
             continue
-        if QUIT_CHAR == name[0] or QUIT_CHAR.title() == name[0]:
+        if QUIT_CHAR == name[0]:
             return filtered_list
-        for char in name:
-            if char.isdigit():
-                checker = 1
-                break
-        if checker == 0:
-            filtered_list.append(name)
-        if name == names[-1] or names.index(name) == 5:
-            return filtered_list
+        if any(char.isdigit() for char in name):
+            continue
+        filtered_list.append(name)
+
+    return filtered_list.__str__()
 
 
-print(filter_names(['tim', 'amber', 'ana', 'c1ndy', 'sara', 'molly', 'henry']))
+print(filter_names(['t1im', 'amber', 'ana', 'c1ndy', 'sara', 'molly', 'henry']))
