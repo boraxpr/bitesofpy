@@ -18,7 +18,7 @@ def filter_names(names):
             continue
         filtered_list.append(name)
 
-    return filtered_list.__str__()
+    return filtered_list[0:5]
 
 
 print(filter_names(['t1im', 'amber', 'ana', 'c1ndy', 'sara', 'molly', 'henry']))
