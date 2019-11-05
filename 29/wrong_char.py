@@ -1,5 +1,4 @@
 def get_index_different_char(chars):
-    result = []
     Al = 0
     nonAl = 0
     for char in chars:
@@ -18,17 +17,17 @@ def get_index_different_char(chars):
         for char in chars:
             charS = str(char)
             if not charS.isalnum():
-                result.append(chars.index(char))
+                index = int(chars.index(char))
     else:
         for char in chars:
             charS = str(char)
             if charS.isalnum():
-                result.append(chars.index(char))
-    return result
+                index = int(chars.index(char))
+    # print(type(index))
+    return index
 
 
-print(get_index_different_char(
-        [2, '.', ',', '!']))
-#
+print(get_index_different_char([2, '.', ',', '!']))
+
 # A = ["1","3","A"]
 # print(A.index("A"))
