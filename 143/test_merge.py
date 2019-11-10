@@ -23,8 +23,3 @@ def test_name_not_found():
 def test_duplicate_name():
     assert get_person_age('thomas') == 46
     assert get_person_age('ana') == 26
-
-    test_regular_name()
-    test_case_insensitive_lookup()
-    test_name_not_found()
-    test_duplicate_name()

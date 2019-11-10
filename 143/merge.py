@@ -11,16 +11,23 @@ def get_person_age(name):
        greatest N (so group3 > group2 > group1)
     """
     age = dict()
+    name = str(name)
+    name = name.lower()
+    # print(name)
+    # print(name)
     for element in group1:
-        if element == name.lower():
+        if element.lower() == name:
             age['group1'] = group1[name]
     for element in group2:
-        if element == name.lower():
+        if element.lower() == name:
             age['group2'] = group2[name]
     for element in group3:
-        if element == name.lower():
+        if element.lower() == name:
             age['group3'] = group3[name]
     age = sorted(age.items(), reverse=True)
-    return age[0][1]
+    if bool(age):
+        return age[0][1]
+    else:
+        return NOT_FOUND
 
-# print(get_person_age("ana"))
+# print(get_person_age(-1))
