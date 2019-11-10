@@ -10,21 +10,17 @@ def get_person_age(name):
        If name in > 1 dict, return the match of the group with
        greatest N (so group3 > group2 > group1)
     """
-    age = list()
+    age = dict()
     for element in group1:
         if element == name.lower():
-            age.insert(2,group1[name])
+            age['group1'] = group1[name]
     for element in group2:
         if element == name.lower():
-            age.insert(1,group2[name])
+            age['group2'] = group2[name]
     for element in group3:
         if element == name.lower():
-            age.insert(0,group3[name])
-
-    if len(age) > 1:
-        age.sort()
-        return age[-1]
-    else:
-        return age[0]
+            age['group3'] = group3[name]
+    age = sorted(age.items(), reverse=True)
+    return age[0][1]
 
 # print(get_person_age("ana"))
