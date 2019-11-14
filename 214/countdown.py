@@ -4,5 +4,8 @@ def countdown():
     while True:
         yield num
         num -= 1
-        if num < 1:
-            raise StopIteration
+        if num == 100 or num == 0:
+            return
+
+
+
