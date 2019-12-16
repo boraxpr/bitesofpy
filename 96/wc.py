@@ -9,18 +9,21 @@ def wc(file_):
             data = tempfile.read()
     line_counter = 0
     word_counter = 0
-    char_counter = 1
+    char_counter = 0
     for line in data.splitlines():
         # print(ch)
+        # print(line)
         line_counter = line_counter+1
         for word in line.split(" "):
-            if word is not None:
-                word_counter = word_counter+1
+            word_counter = word_counter+1
+            print(word)
             for char in word:
                 # print(char)
                 char_counter = char_counter+1
 
-    return str(line_counter) + "\t" + str(word_counter)+ "\t" + str(char_counter) + "\t" + file_
+    char_counter = char_counter + data.count(' ')
+    return str(line_counter) + " " + str(word_counter) + " " + str(char_counter) + " " + file_
+
 
 if __name__ == '__main__':
     # make it work from cli like original unix wc
