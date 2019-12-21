@@ -16,5 +16,3 @@ def tail(filepath, n):
     # print(dat)
     return dat
 
-
-tail("/home/bora/0WORKYR3/_pybites/bitesofpy/101/driving.py",2)
