@@ -12,7 +12,7 @@ def wc(file_):
     char_counter = 0
     for line in data.splitlines():
         # print(ch)
-        print(line)
+        # print(line)
         line_counter = line_counter+1
         # print(char_counter)
         for word in line.split():
