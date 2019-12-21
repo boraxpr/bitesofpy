@@ -12,20 +12,17 @@ def wc(file_):
     char_counter = 0
     for line in data.splitlines():
         # print(ch)
-        # print(line)
+        print(line)
         line_counter = line_counter+1
-        for word in line.split(" "):
+        # print(char_counter)
+        for word in line.split():
             word_counter = word_counter+1
-            print(word)
-            for char in word:
-                # print(char)
-                char_counter = char_counter+1
+    char_counter = data.__len__()
 
-    char_counter = char_counter + data.count(' ')
     return str(line_counter) + " " + str(word_counter) + " " + str(char_counter) + " " + file_
 
 
 if __name__ == '__main__':
     # make it work from cli like original unix wc
     import sys
-    print(wc(sys.argv[1]))
+    print(wc(sys.argv[0]))
