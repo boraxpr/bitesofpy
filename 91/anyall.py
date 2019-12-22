@@ -4,6 +4,7 @@ VOWELS = 'aeiou'
 PYTHON = 'python'
 
 # print("ee".__len__())
+x = "x"
 
 
 def contains_only_vowels(input_str):
