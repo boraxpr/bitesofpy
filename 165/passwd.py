@@ -67,4 +67,4 @@ def get_users_for_shell(passwd_output: str = PASSWD_OUTPUT,
     return sorted(users)
 
 
-# print(get_users_for_shell(passwd_output=OTHER_PASSWD_OUTPUT, grep_shell='ksh'))
+# print(get_users_for_shell(passwd_output=OTHER_PASWD_OUTPUT, grep_shell='ksh'))
