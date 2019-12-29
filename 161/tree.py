@@ -10,12 +10,12 @@ def count_dirs_and_files(directory='.'):
     with os.scandir(directory) as it:
         for entry in it:
             if entry.is_file():
-                number_of_files += 1
-    with os.scandir(directory) as it:
-        for entry in it:
-            if entry.is_dir():
-                number_of_directories += 1
-    t = (number_of_directories, number_of_files)
-    return t
+                number_of_files = number_of_files + 1
+            elif entry.is_dir():
+                number_of_directories = number_of_directories + 1
+    counts = list([number_of_directories,number_of_files])
+    return tuple(counts)
+
+
 
 print(count_dirs_and_files())
