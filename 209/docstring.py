@@ -1,7 +1,7 @@
 def sum_numbers(numbers):
     """Returns sum of numbers
 
-        :param numbers: Start index, defaults to 1
+        :param numbers: A list of numbers
         :type numbers: list
         :return: sum of numbers
         :rtype: int
