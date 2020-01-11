@@ -5,5 +5,6 @@ def sum_numbers(numbers):
         :type numbers: list
         :return: sum of numbers
         :rtype: int
+        :raises: TypeError
         """
     pass
