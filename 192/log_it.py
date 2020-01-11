@@ -24,7 +24,7 @@ def log_it(level: Callable, msg: str) -> None:
     # elif level_name == "critical":
     #     logger.log(level=50, msg=msg)
 
-
+# print(log_it.__annotations__)
 
 if __name__ == "__main__":
     log_it(DEBUG, "This is a debug message.")
