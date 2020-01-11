@@ -1,10 +1,10 @@
 def sum_numbers(numbers):
-    """Returns sum of numbers
+    """Sums numbers
 
-        :param numbers: A list of numbers
+        :param numbers: a list of numbers
         :type numbers: list
         :return: sum of numbers
         :rtype: int
-        :raises: TypeError
+        :raises TypeError: if not all numeric values passed in
         """
     pass
