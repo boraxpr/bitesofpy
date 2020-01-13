@@ -18,4 +18,4 @@ def test_print_workout_days(capsys):
 
     print_workout_days(workout="random non-relevant workout")
     captured = capsys.readouterr()
-    assert captured.out == "No matching workout"
+    assert captured.out == "No matching workout\n"
