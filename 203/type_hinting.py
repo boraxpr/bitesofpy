@@ -1,4 +1,6 @@
-import typing
+from dataclasses import dataclass
+
+@dataclass
 class Employee:
     """Simple Employee class
 
@@ -9,6 +11,11 @@ class Employee:
     :param wage: Float of hourly pay
     :param weekly_pay: Property which returns a string for weekly pay
     """
+    first_name: str
+    last_name: str
+    days_per_week: str
+    hours_per_day: float
+    wage : float
 
     def __init__(self, first_name:str, last_name:str, days_per_week:int,
                  hours_per_day:float, wage:float):
@@ -17,6 +24,9 @@ class Employee:
         self.days_per_week = days_per_week
         self.hours_per_day = hours_per_day
         self.wage = wage
+
+    number: float
+    places: int
 
     def _rounder(self, number:float, places:int) -> str:
         """Rounds a number the specified number of places
