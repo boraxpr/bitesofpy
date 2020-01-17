@@ -44,16 +44,15 @@ def sort_books_by_first_authors_last_name(books=books):
     Expected last book in list:
     Automate the Boring Stuff with Python
     """
-    books.sort(key=attrgetter("authors"),reverse=-1)
-    return books
+    return sorted(books, key=lambda x: x.authors.split(',')[0].split()[-1])
+
 
 def sort_books_by_number_of_page(books=books):
     """
     Expected last book in list:
     Fluent Python
     """
-    books.sort(key=lambda x: x.pages)
-    return books
+    return sorted(books, key=attrgetter("pages"))
 
 
 def sort_books_by_published_date(books=books):
@@ -61,5 +60,4 @@ def sort_books_by_published_date(books=books):
     Expected last book in list:
     Python Interviews
     """
-    books.sort(key=lambda x: datetime.strptime(x.published,"%Y-%m-%d")-datetime.now())
-    return books
+    return sorted(books, key=lambda x: datetime.strptime(x.published,"%Y-%m-%d"))
