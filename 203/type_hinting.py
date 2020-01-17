@@ -13,12 +13,12 @@ class Employee:
     """
     first_name: str
     last_name: str
-    days_per_week: str
+    days_per_week: int
     hours_per_day: float
     wage : float
 
-    def __init__(self, first_name:str, last_name:str, days_per_week:int,
-                 hours_per_day:float, wage:float):
+    def __init__(self, first_name, last_name, days_per_week,
+                 hours_per_day, wage):
         self.first_name = first_name
         self.last_name = last_name
         self.days_per_week = days_per_week
@@ -28,7 +28,7 @@ class Employee:
     number: float
     places: int
 
-    def _rounder(self, number:float, places:int) -> str:
+    def _rounder(self, number, places) -> str:
         """Rounds a number the specified number of places
 
         :param number: Float of number of round
