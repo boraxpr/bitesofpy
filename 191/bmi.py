@@ -28,14 +28,11 @@ data = """Luke Skywalker,172,77
 def person_max_bmi(data=data):
     """Return (name, BMI float) of the character in data that
        has the highest BMI (rounded on 2 decimals)"""
-    BMIdict = dict()
+    BMIs = dict()
     for line in data.splitlines():
         line = dedent(line)
-        entry=line.split(',')
-        name = entry[0]
-        height = entry[1]
-        mass = entry[2]
+        name, height, mass = line.split(',')
         BMI = float(mass) / ((int(height) / 100) ** 2)
-        BMIdict.update({name:round(BMI,ndigits=2)})
-    sortedbmilist = sorted(BMIdict.items(),key= lambda x: x[1])
-    return sortedbmilist[-1]
+        BMIs.update({name:round(BMI,ndigits=2)})
+    sortedbmis = sorted(BMIs.items(),key= lambda x: x[1])
+    return sortedbmis[-1]
