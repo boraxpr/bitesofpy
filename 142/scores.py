@@ -1,6 +1,4 @@
-import numbers
 from collections import namedtuple
-from functools import reduce
 from typing import List
 
 MIN_SCORE = 4
@@ -20,13 +18,9 @@ def calculate_score(scores: List[int]) -> int:
        Returns int of the sum of the scores.
     """
     #accumulated score
-    acscore = 0
-    for score in scores:
-        if score not in DICE_VALUES:
-            raise ValueError
-        if score >= MIN_SCORE:
-            acscore += score
-    return acscore
+    if not all(i in DICE_VALUES for i in scores):
+        raise ValueError("Includes invalid dice roll(s)")
+    return sum(i for i in scores if i >= MIN_SCORE)
 
 def get_winner(players):
     """Given a list of Player namedtuples return the player
@@ -46,20 +40,7 @@ def get_winner(players):
        output:
          Player(name='player 3', scores=[4, 5, 1, 2])
     """
-    lencheck = set()
-    scores = dict()
-    for player in players:
-        lencheck.add(len(player.scores))
-        if len(lencheck) > 1:
-            raise ValueError
-        scores.update({player.name: calculate_score(player.scores)})
-    HighestscorePlayername = sorted(scores.items(),key=lambda x:x[1])[-1][0]
-    for player in players:
-        if player.name == HighestscorePlayername:
-            return player
-
-print(get_winner([
-      Player(name='player 1', scores=[1, 3, 2, 5]),
-      Player(name='player 2', scores=[1, 1, 1, 1]),
-      Player(name='player 3', scores=[4, 5, 1, 2]),  # max 9
-    ]))
+    lencheck = {len(player.scores) for player in players}
+    if len(lencheck) > 1:
+        raise ValueError("Players with different amount of score")
+    return max(players, key=lambda x: calculate_score(x.scores))
