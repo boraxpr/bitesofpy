@@ -1,5 +1,4 @@
 import csv
-import time
 from collections import defaultdict, namedtuple
 import os
 from urllib.request import urlretrieve
@@ -30,8 +29,10 @@ def get_movies_by_director():
             # Some movies do not have title_year data
             if len(row['title_year']) != 0:
                 title_year = int(row['title_year'])
-            movie = Movie(row['movie_title'], title_year, float(row['imdb_score']))
+            movie = Movie(row['movie_title'].replace('\xa0', ''), title_year, float(row['imdb_score']))
             director = row['director_name']
+            if title_year < MIN_YEAR:
+                continue
             movies[director].append(movie)
     return movies
 
