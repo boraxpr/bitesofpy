@@ -1,3 +1,5 @@
+from collections import namedtuple
+
 import pandas as pd
 
 data = "https://bites-data.s3.us-east-2.amazonaws.com/summer.csv"
