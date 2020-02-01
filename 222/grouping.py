@@ -1,4 +1,3 @@
-import types
 from itertools import islice
 
 
