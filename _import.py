@@ -11,9 +11,9 @@ def main() -> str:
         with zipfile.ZipFile(userinput + ".zip", 'r') as zip_ref:
             zip_ref.extractall(userinput)
         os.remove(userinput + ".zip")
-        return "Successful!"
+        print("Successful!")
     else:
-        return "Manual-exception-handling : Invalid name !"
+        print("Manual-exception-handling : Invalid name !")
 
 
 if __name__ == "__main__":
