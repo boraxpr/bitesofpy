@@ -124,4 +124,9 @@ https://codechalleng.es/profiles/boraxpr </br>
 | Intro Bite 08. Loop over a dict of namedtuples calculating a total score      | Oct. 19, 2019, 7:07 p.m.  |             | 1         | 1           |
 | Bite 1. Sum n numbers                                                         | Oct. 16, 2019, 5:01 a.m.  |             | 2         | 1           |
 
-![alt text](https://raw.githubusercontent.com/boraxpr/bitesofpy/master/Bluebelt_250points.png "Blue belt - Reaching 250 points")
+![alt text](Bluebelt_250points.png "Blue belt - Reaching 250 points")
+![alt text](Greenbelt_175points.png "Green belt - Reaching 175 points")
+![alt text](Orangebelt_100points.png "Orange belt - Reaching 100 points")
+![alt text](Yellowbelt_50points.png "Yellow belt - Reaching 50 points")
+![alt text](Whitebelt_10points.png "White belt - Reaching 10 points")
+![alt_text](Beginner_Intro.png "Beginner - Intro Bites")
